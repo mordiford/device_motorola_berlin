@@ -34,7 +34,10 @@ PRODUCT_SHIPPING_API_LEVEL := 30
 # Inherit from motorola sm7325-common
 $(call inherit-product, device/motorola/sm7325-common/sm7325.mk)
 
-# Overlay
+# Overlays
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay-lineage
+
 PRODUCT_PACKAGES += \
     FrameworksResBerlin \
     LineageSystemUIBerlin \
